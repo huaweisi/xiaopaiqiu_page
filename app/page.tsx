@@ -406,7 +406,7 @@ export default function Home() {
         <footer>
           <div className="wrap">
             本页为《排球少年!!》动漫介绍单页示例，视觉图为原创生成资产，仅用于网页展示。
-            <p className="footer-ending">未完待续</p>
+            <p className="footer-ending">未完待续...</p>
           </div>
         </footer>
     </>
