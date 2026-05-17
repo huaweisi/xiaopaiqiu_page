@@ -51,9 +51,10 @@ export default function Home() {
                 </label>
                 <label>
                   <span>预期观看时间</span>
-                  <select name="watchTime" defaultValue="" required>
+                  <select name="watchTime" defaultValue="40-minutes" required>
                     <option value="" disabled>请选择</option>
                     <option value="30-minutes">30分钟内</option>
+                    <option value="40-minutes">40分钟</option>
                     <option value="1-hour">约1小时</option>
                     <option value="2-hours">约2小时</option>
                     <option value="more-than-2-hours">2小时以上</option>
