@@ -18,6 +18,7 @@ export default function Home() {
             <a href="#about">作品</a>
             <a href="#teams">队伍</a>
             <a href="#characters">角色</a>
+            <a href="#reviews">评价</a>
             <a href="#watch">观看顺序</a>
           </nav>
         </header>
@@ -254,6 +255,66 @@ export default function Home() {
             </div>
           </section>
       
+          <section className="section reviews" id="reviews">
+            <div className="wrap">
+              <div className="section-head">
+                <h2>观众评价</h2>
+                <p>从第一次被快攻点燃，到后来记住每支队伍的遗憾与骄傲，很多观众喜欢它，正是因为比赛之外也有真实的人。</p>
+              </div>
+              <div className="review-carousel" aria-label="观众评价轮播">
+                <div className="review-track">
+                  <article className="review-card">
+                    <p>“明明不是排球爱好者，看到乌野一点点把配合磨出来，还是会跟着屏住呼吸。”</p>
+                    <div className="review-meta"><span>林同学 · 热血番入坑</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card">
+                    <p>“它最厉害的是让对手也闪闪发光。每场比赛结束，都会舍不得某一支队伍离开。”</p>
+                    <div className="review-meta"><span>阿澈 · 群像剧爱好者</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card">
+                    <p>“日向和影山不是突然变强，而是一次次失败后真的学会了看见队友，这点特别打动我。”</p>
+                    <div className="review-meta"><span>小雨 · 二刷观众</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card">
+                    <p>“比赛节奏清楚到像在现场看球，最后几分的拉扯感太强了，完全停不下来。”</p>
+                    <div className="review-meta"><span>周末排球社 · 运动番粉</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card">
+                    <p>“月岛那条成长线让我印象很深。不是每个人一开始都热血，但每个人都能找到认真起来的理由。”</p>
+                    <div className="review-meta"><span>南瓜 · 角色党</span><span className="review-stars">★★★★☆</span></div>
+                  </article>
+                  <article className="review-card">
+                    <p>“看完会很想去做点什么，不一定是打排球，就是那种想重新努力一次的冲动。”</p>
+                    <div className="review-meta"><span>木木 · 初看观众</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card" aria-hidden="true">
+                    <p>“明明不是排球爱好者，看到乌野一点点把配合磨出来，还是会跟着屏住呼吸。”</p>
+                    <div className="review-meta"><span>林同学 · 热血番入坑</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card" aria-hidden="true">
+                    <p>“它最厉害的是让对手也闪闪发光。每场比赛结束，都会舍不得某一支队伍离开。”</p>
+                    <div className="review-meta"><span>阿澈 · 群像剧爱好者</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card" aria-hidden="true">
+                    <p>“日向和影山不是突然变强，而是一次次失败后真的学会了看见队友，这点特别打动我。”</p>
+                    <div className="review-meta"><span>小雨 · 二刷观众</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card" aria-hidden="true">
+                    <p>“比赛节奏清楚到像在现场看球，最后几分的拉扯感太强了，完全停不下来。”</p>
+                    <div className="review-meta"><span>周末排球社 · 运动番粉</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                  <article className="review-card" aria-hidden="true">
+                    <p>“月岛那条成长线让我印象很深。不是每个人一开始都热血，但每个人都能找到认真起来的理由。”</p>
+                    <div className="review-meta"><span>南瓜 · 角色党</span><span className="review-stars">★★★★☆</span></div>
+                  </article>
+                  <article className="review-card" aria-hidden="true">
+                    <p>“看完会很想去做点什么，不一定是打排球，就是那种想重新努力一次的冲动。”</p>
+                    <div className="review-meta"><span>木木 · 初看观众</span><span className="review-stars">★★★★★</span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
           <section className="section alt" id="watch">
             <div className="wrap">
               <div className="section-head">

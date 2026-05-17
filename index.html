@@ -475,6 +475,76 @@
       color: #5e6573;
     }
 
+    .reviews {
+      overflow: hidden;
+    }
+
+    .review-carousel {
+      position: relative;
+      overflow: hidden;
+      padding: 6px 0;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .review-track {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+      animation: review-scroll 32s linear infinite;
+    }
+
+    .review-carousel:hover .review-track {
+      animation-play-state: paused;
+    }
+
+    .review-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: min(360px, calc(100vw - 56px));
+      min-height: 218px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 14px 38px rgba(16, 26, 45, 0.08);
+    }
+
+    .review-card p {
+      margin: 0;
+      color: #2b3448;
+      font-size: 16px;
+    }
+
+    .review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .review-stars {
+      color: var(--orange);
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    @keyframes review-scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-50% - 8px));
+      }
+    }
+
     .watch {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -707,6 +777,17 @@
         padding: 22px;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .review-track {
+        animation: none;
+      }
+
+      .review-carousel {
+        overflow-x: auto;
+        mask-image: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -719,6 +800,7 @@
       <a href="#about">作品</a>
       <a href="#teams">队伍</a>
       <a href="#characters">角色</a>
+      <a href="#reviews">评价</a>
       <a href="#watch">观看顺序</a>
     </nav>
   </header>
@@ -951,6 +1033,67 @@
         <div class="score" aria-label="装饰比分板">
           <div><strong>25</strong><span>KARASUNO</span></div>
           <div><strong>23</strong><span>RIVAL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>观众评价</h2>
+          <p>从第一次被快攻点燃，到后来记住每支队伍的遗憾与骄傲，很多观众喜欢它，正是因为比赛之外也有真实的人。</p>
+        </div>
+        <div class="review-carousel" aria-label="观众评价轮播">
+          <div class="review-track">
+            <article class="review-card">
+              <p>“明明不是排球爱好者，看到乌野一点点把配合磨出来，还是会跟着屏住呼吸。”</p>
+              <div class="review-meta"><span>林同学 · 热血番入坑</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card">
+              <p>“它最厉害的是让对手也闪闪发光。每场比赛结束，都会舍不得某一支队伍离开。”</p>
+              <div class="review-meta"><span>阿澈 · 群像剧爱好者</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card">
+              <p>“日向和影山不是突然变强，而是一次次失败后真的学会了看见队友，这点特别打动我。”</p>
+              <div class="review-meta"><span>小雨 · 二刷观众</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card">
+              <p>“比赛节奏清楚到像在现场看球，最后几分的拉扯感太强了，完全停不下来。”</p>
+              <div class="review-meta"><span>周末排球社 · 运动番粉</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card">
+              <p>“月岛那条成长线让我印象很深。不是每个人一开始都热血，但每个人都能找到认真起来的理由。”</p>
+              <div class="review-meta"><span>南瓜 · 角色党</span><span class="review-stars">★★★★☆</span></div>
+            </article>
+            <article class="review-card">
+              <p>“看完会很想去做点什么，不一定是打排球，就是那种想重新努力一次的冲动。”</p>
+              <div class="review-meta"><span>木木 · 初看观众</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <p>“明明不是排球爱好者，看到乌野一点点把配合磨出来，还是会跟着屏住呼吸。”</p>
+              <div class="review-meta"><span>林同学 · 热血番入坑</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <p>“它最厉害的是让对手也闪闪发光。每场比赛结束，都会舍不得某一支队伍离开。”</p>
+              <div class="review-meta"><span>阿澈 · 群像剧爱好者</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <p>“日向和影山不是突然变强，而是一次次失败后真的学会了看见队友，这点特别打动我。”</p>
+              <div class="review-meta"><span>小雨 · 二刷观众</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <p>“比赛节奏清楚到像在现场看球，最后几分的拉扯感太强了，完全停不下来。”</p>
+              <div class="review-meta"><span>周末排球社 · 运动番粉</span><span class="review-stars">★★★★★</span></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <p>“月岛那条成长线让我印象很深。不是每个人一开始都热血，但每个人都能找到认真起来的理由。”</p>
+              <div class="review-meta"><span>南瓜 · 角色党</span><span class="review-stars">★★★★☆</span></div>
+            </article>
+            <article class="review-card" aria-hidden="true">
+              <p>“看完会很想去做点什么，不一定是打排球，就是那种想重新努力一次的冲动。”</p>
+              <div class="review-meta"><span>木木 · 初看观众</span><span class="review-stars">★★★★★</span></div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
