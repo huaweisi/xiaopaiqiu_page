@@ -477,23 +477,28 @@
 
     .watch {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--white);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .watch-step {
       position: relative;
-      min-height: 168px;
-      padding: 24px;
-      border-right: 1px solid var(--line);
+      min-height: 318px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 34px rgba(16, 26, 45, 0.07);
     }
 
-    .watch-step:last-child {
-      border-right: 0;
+    .watch-step.featured {
+      border-color: rgba(255, 122, 47, 0.42);
+      background: linear-gradient(180deg, #fff9f3, var(--white));
+    }
+
+    .watch-step.upcoming {
+      border-style: dashed;
+      background: linear-gradient(180deg, #f4fbfb, var(--white));
     }
 
     .num {
@@ -508,15 +513,39 @@
       font-weight: 900;
     }
 
+    .watch-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .watch-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 9px;
+      border-radius: 999px;
+      color: #314056;
+      background: #eef3f8;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .watch-step h3 {
-      margin: 0 0 8px;
-      font-size: 19px;
+      margin: 0 0 12px;
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 1.18;
     }
 
     .watch-step p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
+    }
+
+    .watch-step p + p {
+      margin-top: 10px;
     }
 
     .quote-band {
@@ -609,12 +638,7 @@
       }
 
       .watch-step {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .watch-step:nth-last-child(-n + 2) {
-        border-bottom: 0;
+        min-height: 0;
       }
     }
 
@@ -655,15 +679,6 @@
       .themes,
       .watch {
         grid-template-columns: 1fr;
-      }
-
-      .watch-step,
-      .watch-step:nth-last-child(-n + 2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .watch-step:last-child {
-        border-bottom: 0;
       }
 
       .character {
@@ -943,33 +958,89 @@
     <section class="section alt" id="watch">
       <div class="wrap">
         <div class="section-head">
-          <h2>推荐观看顺序</h2>
-          <p>如果是第一次看，按动画播出主线顺序走最顺。总集篇可按需要补，核心体验主要来自 TV 动画与后续剧场版。</p>
-        </div>
-        <div class="watch">
-          <article class="watch-step">
-            <span class="num">1</span>
-            <h3>第一季</h3>
-            <p>乌野集结，日向和影山从冲突到组成怪人快攻。</p>
-          </article>
-          <article class="watch-step">
-            <span class="num">2</span>
-            <h3>第二季</h3>
-            <p>东京集训与春高预选，队伍开始真正升级。</p>
-          </article>
-          <article class="watch-step">
-            <span class="num">3</span>
-            <h3>第三季</h3>
-            <p>对阵白鸟泽，十集高密度比赛，压迫感拉满。</p>
-          </article>
-          <article class="watch-step">
-            <span class="num">4</span>
-            <h3>TO THE TOP 与剧场版</h3>
-            <p>全国大赛展开，乌野迎来更强的对手和更大的舞台。</p>
-          </article>
-        </div>
+        <h2>各季与大电影信息</h2>
+        <p>按主线推进整理 TV 动画、OVA 与剧场版。第一次观看可以顺着编号走，总集篇主要用于回顾，想完整感受角色成长则优先看 TV 与剧场版主线。</p>
       </div>
-    </section>
+      <div class="watch">
+        <article class="watch-step">
+          <span class="num">1</span>
+          <div class="watch-meta">
+            <span>TV 第 1 季</span>
+            <span>2014</span>
+            <span>25 集</span>
+          </div>
+          <h3>《排球少年!!》</h3>
+          <p>故事从日向翔阳追逐“小巨人”的背影开始。进入乌野后，他与中学赛场上击败自己的影山飞雄成为队友，两人从互不服气到磨合出“怪人快攻”，也让沉寂的乌野重新拥有进攻锋芒。</p>
+          <p>这一季重点铺开乌野的队伍骨架：泽村的稳定、菅原的调度、田中的气势、西谷的守护、月岛的冷静与山口的挣扎都逐渐成形。与青叶城西、音驹等队伍的交锋，让观众看见乌野并不是靠主角光环取胜，而是在每一次失误后重新组织自己。</p>
+        </article>
+        <article class="watch-step">
+          <span class="num">2</span>
+          <div class="watch-meta">
+            <span>TV 第 2 季</span>
+            <span>2015-2016</span>
+            <span>25 集</span>
+          </div>
+          <h3>《排球少年!! 第二季》</h3>
+          <p>第二季把视野从“组队”推进到“升级”。乌野参加东京合宿，和音驹、梟谷等强队反复练习，在失败中寻找新的武器。日向开始理解诱饵的意义，影山学习把托球交给队友，而月岛也在一次次拦网训练里被点燃胜负心。</p>
+          <p>后半段进入春高宫城县预选，乌野再次面对及川彻率领的青叶城西。比赛不仅是技术对抗，也是影山与及川、日向与整体防守、乌野与过去失败之间的正面碰撞。它把第一季积累的情绪真正推向爆发。</p>
+        </article>
+        <article class="watch-step">
+          <span class="num">3</span>
+          <div class="watch-meta">
+            <span>TV 第 3 季</span>
+            <span>2016</span>
+            <span>10 集</span>
+          </div>
+          <h3>《乌野高中 VS 白鸟泽学园高中》</h3>
+          <p>第三季几乎把全部篇幅都交给一场决赛：乌野对阵白鸟泽。牛岛若利的力量像一堵持续压下来的墙，白布、天童等人的存在也让白鸟泽不是单纯依赖王牌的队伍，而是拥有明确战术逻辑的县内王者。</p>
+          <p>这 10 集的密度很高，重点在“如何对抗绝对强者”。月岛的关键拦网、日向的跑动牵制、影山的判断、三年级们的坚持都被压进同一场长局里。看完这一季，乌野从挑战者真正拿到了通往全国的资格。</p>
+        </article>
+        <article class="watch-step">
+          <span class="num">4</span>
+          <div class="watch-meta">
+            <span>OVA</span>
+            <span>2020</span>
+            <span>2 集</span>
+          </div>
+          <h3>《陆 VS 空 / 球之“道”》</h3>
+          <p>这组 OVA 衔接第三季与第四季，主要补充东京代表决定战。音驹、户美、枭谷等队伍争夺春高门票，故事重心从乌野短暂转向他们的宿敌与朋友。</p>
+          <p>如果只追主线可以略过，但它能让后续全国大赛更有分量。尤其是音驹的“连接”哲学、孤爪研磨对比赛的理解，以及黑尾等人的责任感，都会在剧场版《垃圾场的决战》中得到回响。</p>
+        </article>
+        <article class="watch-step">
+          <span class="num">5</span>
+          <div class="watch-meta">
+            <span>TV 第 4 季</span>
+            <span>2020</span>
+            <span>25 集</span>
+          </div>
+          <h3>《TO THE TOP》</h3>
+          <p>第四季进入全国大赛前后的新阶段。日向以球童身份闯进强化合宿，开始从接球、站位、观察这些基础处重新理解排球；影山进入全日本青年强化合宿，也被迫面对更高水平选手带来的刺激。</p>
+          <p>全国赛开幕之后，乌野先后面对椿原与稻荷崎。稻荷崎战是全系列最重要的比赛之一，宫侑、宫治、北信介与角名等角色让对手侧同样鲜明。乌野必须把过去学到的速度、同步进攻、防守韧性全部调动起来，才能在全国舞台站稳。</p>
+        </article>
+        <article class="watch-step featured">
+          <span class="num">6</span>
+          <div class="watch-meta">
+            <span>剧场版</span>
+            <span>2024</span>
+            <span>约 85 分钟</span>
+          </div>
+          <h3>《剧场版 排球少年!! 垃圾场的决战》</h3>
+          <p>这部电影承接第四季，聚焦乌野高中与音驹高中的春高三回战。两队从练习赛一路互相试探、互相吸收，终于在正式赛场迎来没有“再来一局”的对决，因此“垃圾场的决战”不只是宿敌之战，也是两种排球理念的兑现。</p>
+          <p>电影的看点在于比赛节奏和情绪收束。乌野追求突破与爆发，音驹强调连接与消耗，孤爪研磨的策略会一点点限制日向的自由。它适合在看完第四季后直接观看，很多关于音驹的细节会因为前面铺垫而更动人。</p>
+        </article>
+        <article class="watch-step upcoming">
+          <span class="num">7</span>
+          <div class="watch-meta">
+            <span>后续剧场版/特别动画</span>
+            <span>2027 预定</span>
+          </div>
+          <h3>《VS 小巨人》与《怪物们的去处》</h3>
+          <p>官方已公布后续将继续描写春高准决胜阶段的关键对局。《VS 小巨人》聚焦乌野对阵鸥台，日向将面对同样被称为“小巨人”的星海光来，这是他追逐偶像背影后必须回答的一场比赛。</p>
+          <p>特别动画《怪物们的去处》则将视角交给枭谷学园与狢坂高校，围绕木兔光太郎、桐生八等顶级王牌展开。由于这些内容截至目前尚未正式上映，本页只作为观看顺序预告，不提前写死具体成片细节。</p>
+        </article>
+      </div>
+    </div>
+  </section>
   </main>
 
   <footer>

@@ -469,23 +469,28 @@
 
     .watch {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--white);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .watch-step {
       position: relative;
-      min-height: 168px;
-      padding: 24px;
-      border-right: 1px solid var(--line);
+      min-height: 318px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 12px 34px rgba(16, 26, 45, 0.07);
     }
 
-    .watch-step:last-child {
-      border-right: 0;
+    .watch-step.featured {
+      border-color: rgba(255, 122, 47, 0.42);
+      background: linear-gradient(180deg, #fff9f3, var(--white));
+    }
+
+    .watch-step.upcoming {
+      border-style: dashed;
+      background: linear-gradient(180deg, #f4fbfb, var(--white));
     }
 
     .num {
@@ -500,15 +505,39 @@
       font-weight: 900;
     }
 
+    .watch-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .watch-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 9px;
+      border-radius: 999px;
+      color: #314056;
+      background: #eef3f8;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .watch-step h3 {
-      margin: 0 0 8px;
-      font-size: 19px;
+      margin: 0 0 12px;
+      font-size: clamp(22px, 2.4vw, 30px);
+      line-height: 1.18;
     }
 
     .watch-step p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
+    }
+
+    .watch-step p + p {
+      margin-top: 10px;
     }
 
     .quote-band {
@@ -601,12 +630,7 @@
       }
 
       .watch-step {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .watch-step:nth-last-child(-n + 2) {
-        border-bottom: 0;
+        min-height: 0;
       }
     }
 
@@ -646,15 +670,6 @@
       .themes,
       .watch {
         grid-template-columns: 1fr;
-      }
-
-      .watch-step,
-      .watch-step:nth-last-child(-n + 2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .watch-step:last-child {
-        border-bottom: 0;
       }
 
       .character {
